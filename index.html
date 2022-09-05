@@ -1,0 +1,56 @@
+<html>
+    <style>
+    .key {
+        width:18px;
+        text-align:center;
+        border-radius:3px;
+        background-color:lightgrey;
+    }
+    </style>
+
+    <head>
+        <style>
+            @import url(style.css);
+            p.highlight {
+                color: red;
+            }
+            svg {
+                background-color: rgb(41, 41, 36);
+            }
+        </style>
+        <script src="./dist/pong.js"></script>
+    </head>
+    <body>
+        <h1>Pong</h1>
+        <p><b>Instructions:</b>
+        <br><br>
+        You are playing as the left player, use your mouse to control the left paddle.
+        <br>
+        The paddle is used to bounce the ball back to the opponent (same goes with right player).
+        <li> The closer the ball collides to the paddle's center, the faster its horizontal speed will be.
+        <li> The further the ball collides from the paddle's center, the faster its vertical speed will be
+        <li> The winner is the first person to score 7 points.
+        <li> Click on the center text to start and restart game
+        <br><br>
+        <b>Power-ups:</b>
+        <table>
+            <tr><td><div id="Z" class="key" style="width:50px"><b>Z</b></div></td><td>key: Pulls the right paddle to the left paddle's vertical position</td></tr>
+            <tr><td><div id="X" class="key" style="width:50px"><b>X</b></div></td><td>key: Makes your paddle larger</td></tr>
+            <tr><td><div id="C" class="key" style="width:50px"><b>C</b></div></td><td>key: Reverts your paddle back to its original size (after using X key)</td></tr>
+        </table>
+        <br>
+        <b>Incoporate Breakout gameplay:</b>
+        <br>
+        <table>
+            <tr><td><div id="V" class="key" style="width:50px"><b>V</b></div></td><td>key</td></tr>
+        </table>
+        Adds a series of blocks in front of the AI's side which replicates the gameplay of
+        the breakout game. 
+        <br>
+        Like the breakout game, the ball can destroy the blocks through collision but will bounce back.
+        <br>
+        <b>(You can only add more blocks after destroying all the blocks present in the game)</b>
+        </p>
+        <svg id="canvas" width="600" height="600"></svg>
+    </body>
+</html>
